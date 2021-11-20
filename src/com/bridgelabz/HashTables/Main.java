@@ -23,5 +23,7 @@ public class Main {
 			linkedHashMap.put(word, value);
 		}
 		System.out.println(linkedHashMap.get("paranoid"));
+		linkedHashMap.remove("paranoid");
+		System.out.println(linkedHashMap.get("paranoid"));
 	}
 }

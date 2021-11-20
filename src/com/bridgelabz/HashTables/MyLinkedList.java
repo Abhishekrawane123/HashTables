@@ -27,6 +27,24 @@ public class MyLinkedList<K> {
 			this.tail.setNext(myNode);
 			this.tail = myNode;
 		}
+		
+		
+			}
+	
+	public boolean remove(K key) {
+		
+		Inode<K> temp =head;
+		Inode<K> prev = null;
+		while(temp != null) {
+			if(temp.getKey()==key) {
+				prev.setNext(temp.getNext());
+				return true;
+			} 
+			prev = temp;
+			temp = temp.getNext();
+			return false;
+		}
+		return false;
 	}
 
 	@Override
